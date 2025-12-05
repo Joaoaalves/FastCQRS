@@ -23,5 +23,9 @@
       <Description>FastCQRS Adds CQRS, Mediator and DDD structure</Description>
       <PackageTags>DDD; Application; CQRS; Mediator;</PackageTags>
       <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+      <RepositoryUrl>https://github.com/Joaoaalves/FastCQRS</RepositoryUrl>
+      <PackageProjectUrl>https://github.com/Joaoaalves/FastCQRS</PackageProjectUrl>
+      <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 </Project>

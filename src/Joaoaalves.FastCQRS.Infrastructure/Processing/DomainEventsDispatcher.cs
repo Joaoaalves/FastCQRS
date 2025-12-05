@@ -1,5 +1,4 @@
 using Joaoaalves.FastCQRS.Application.Execution;
-using Joaoaalves.FastCQRS.Domain.DDD;
 using Microsoft.EntityFrameworkCore;
 
 namespace Joaoaalves.FastCQRS.Infrastructure.Processing
