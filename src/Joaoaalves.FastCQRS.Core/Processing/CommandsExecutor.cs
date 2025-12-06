@@ -1,8 +1,9 @@
-using Joaoaalves.FastCQRS.Application.Commands;
-using Joaoaalves.FastCQRS.Application.Execution;
+
+using Joaoaalves.FastCQRS.Abstractions.Commands;
+using Joaoaalves.FastCQRS.Abstractions.Processing;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Joaoaalves.FastCQRS.Infrastructure.Processing
+namespace Joaoaalves.FastCQRS.Core.Processing
 {
     /// <summary>
     /// Executes application commands, resolving the required handlers and behaviors via dependency injection.

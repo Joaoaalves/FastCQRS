@@ -1,7 +1,7 @@
 using Joaoaalves.FastCQRS.Abstractions.Notifications;
 using Joaoaalves.FastCQRS.Abstractions.Requests;
 
-namespace Joaoaalves.FastCQRS.Abstractions.Mediator
+namespace Joaoaalves.FastCQRS.Abstractions.Processing
 {
     public interface IMediator
     {

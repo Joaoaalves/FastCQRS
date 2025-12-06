@@ -1,7 +1,8 @@
 ﻿using FluentValidation;
-using Joaoaalves.FastCQRS.Domain.Requests;
+using Joaoaalves.FastCQRS.Abstractions.Exceptions;
+using Joaoaalves.FastCQRS.Abstractions.Requests;
 
-namespace Joaoaalves.FastCQRS.Application.Validation
+namespace Joaoaalves.FastCQRS.Core.Validation
 {
     public class CommandValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators) : IRequestPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>

@@ -1,17 +1,18 @@
 using System.Reflection;
-using Joaoaalves.FastCQRS.Application.Execution;
-using Joaoaalves.FastCQRS.Application.Validation;
-using Joaoaalves.FastCQRS.Domain.Notifications;
-using Joaoaalves.FastCQRS.Domain.Requests;
-using Joaoaalves.FastCQRS.Infrastructure.Persistence;
+using Joaoaalves.FastCQRS.Abstractions.Processing;
 using Microsoft.Extensions.DependencyInjection;
+using Joaoaalves.FastCQRS.Core.Processing;
+using Joaoaalves.FastCQRS.Core.Events;
+using Joaoaalves.FastCQRS.Abstractions.Notifications;
+using Joaoaalves.FastCQRS.Abstractions.Requests;
+using Joaoaalves.FastCQRS.Core.Validation;
 
-namespace Joaoaalves.FastCQRS.Infrastructure.Processing
+namespace Joaoaalves.FastCQRS.Core.Modules
 {
     /// <summary>
     /// Provides methods to configure the mediator module, including command/query handlers and pipeline behaviors.
     /// </summary>
-    public static class MediatorModule
+    public static class CoreModule
     {
         /// <summary>
         /// Registers MediatR-like services and command/query processing pipeline.
@@ -19,7 +20,7 @@ namespace Joaoaalves.FastCQRS.Infrastructure.Processing
         /// <param name="services">The service collection.</param>
         /// <param name="args">Assemblies or assembly name prefixes to scan for handlers.</param>
         /// <returns>The updated <see cref="IServiceCollection"/>.</returns>
-        public static IServiceCollection AddMediatorModule(this IServiceCollection services, params object[] args)
+        public static IServiceCollection AddFastCQRS(this IServiceCollection services, params object[] args)
         {
             services.AddScoped<IMediator, Mediator>();
             services.AddScoped<IDomainEventsDispatcher, DomainEventsDispatcher>();
@@ -32,7 +33,7 @@ namespace Joaoaalves.FastCQRS.Infrastructure.Processing
             services.AddScoped<QueriesExecutor>();
 
             services.AddScoped(typeof(IRequestPipelineBehavior<,>), typeof(CommandValidationBehavior<,>));
-            services.AddScoped(typeof(IRequestPipelineBehavior<,>), typeof(UnitOfWorkPipelineBehavior<,>));
+            // services.AddScoped(typeof(IRequestPipelineBehavior<,>), typeof(UnitOfWorkPipelineBehavior<,>));
 
             return services;
         }

@@ -1,9 +1,9 @@
-using Joaoaalves.FastCQRS.Application.Execution;
-using Joaoaalves.FastCQRS.Application.Queries;
-using Joaoaalves.FastCQRS.Domain.Requests;
+using Joaoaalves.FastCQRS.Abstractions.Processing;
+using Joaoaalves.FastCQRS.Abstractions.Queries;
+using Joaoaalves.FastCQRS.Abstractions.Requests;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Joaoaalves.FastCQRS.Infrastructure.Processing
+namespace Joaoaalves.FastCQRS.Core.Processing
 {
     /// <summary>
     /// Executes queries using the registered pipeline behaviors and query handlers.

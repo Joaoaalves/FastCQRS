@@ -1,9 +1,9 @@
-using Joaoaalves.FastCQRS.Application.Execution;
-using Joaoaalves.FastCQRS.Domain.Notifications;
-using Joaoaalves.FastCQRS.Domain.Requests;
+using Joaoaalves.FastCQRS.Abstractions.Processing;
+using Joaoaalves.FastCQRS.Abstractions.Notifications;
+using Joaoaalves.FastCQRS.Abstractions.Requests;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Joaoaalves.FastCQRS.Infrastructure.Processing
+namespace Joaoaalves.FastCQRS.Core.Processing
 {
     /// <summary>
     /// Implements a custom mediator to handle requests and notifications using runtime reflection.

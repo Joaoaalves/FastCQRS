@@ -1,7 +1,8 @@
 using System.Text.Json.Serialization;
 using Joaoaalves.DDD.Events;
+using Joaoaalves.FastCQRS.Abstractions.Notifications;
 
-namespace Joaoaalves.FastCQRS.Application.DomainEvents
+namespace Joaoaalves.FastCQRS.Core.Events
 {
     public class DomainNotificationBase<T>(T domainEvent) : IDomainEventNotification<T> where T : IDomainEvent
     {

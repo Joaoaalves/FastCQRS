@@ -1,5 +1,7 @@
 
-namespace Joaoaalves.FastCQRS.Application.Commands
+using Joaoaalves.FastCQRS.Abstractions.Commands;
+
+namespace Joaoaalves.FastCQRS.Core.Commands
 {
     public class BaseCommand<TResult> : ICommand<TResult>
     {

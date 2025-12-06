@@ -1,4 +1,4 @@
-namespace Joaoaalves.FastCQRS.Infrastructure.Processing
+namespace Joaoaalves.FastCQRS.Abstractions.Processing
 {
     /// <summary>
     /// Defines a service responsible for dispatching domain events.

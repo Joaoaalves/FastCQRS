@@ -1,11 +1,10 @@
 using Joaoaalves.DDD.Common;
 using Joaoaalves.DDD.Events;
-using Joaoaalves.FastCQRS.Application.DomainEvents;
-using Joaoaalves.FastCQRS.Application.Execution;
-using Joaoaalves.FastCQRS.Domain.Notifications;
+using Joaoaalves.FastCQRS.Abstractions.Notifications;
+using Joaoaalves.FastCQRS.Abstractions.Processing;
 using Microsoft.EntityFrameworkCore;
 
-namespace Joaoaalves.FastCQRS.Infrastructure.Processing
+namespace Joaoaalves.FastCQRS.Core.Events
 {
     /// <summary>
     /// Dispatches domain events collected from tracked entities.
