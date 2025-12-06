@@ -1,9 +1,9 @@
-using Joaoaalves.FastCQRS.Application.Commands;
-using Joaoaalves.FastCQRS.Application.Execution;
-using Joaoaalves.FastCQRS.Domain.Requests;
+using Joaoaalves.FastCQRS.Abstractions.Commands;
+using Joaoaalves.FastCQRS.Abstractions.Processing;
+using Joaoaalves.FastCQRS.Abstractions.Requests;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Joaoaalves.FastCQRS.Infrastructure.Persistence
+namespace Joaoaalves.FastCQRS.Persistence
 {
     /// <summary>
     /// Pipeline behavior that ensures Unit of Work is committed if the command succeeds, or reverted if an exception occurs.
